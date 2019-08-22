@@ -3,14 +3,26 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@types/jest": "24.0.18",
-    "@types/node": "12.7.2",
-    "@types/react": "16.9.2",
-    "@types/react-dom": "16.9.0",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "react-scripts": "3.1.1",
-    "typescript": "3.5.3"
+    "@manaflair/redux-batch": "^1.0.0",
+    "@types/bootstrap": "^4.3.1",
+    "@types/jest": "24.0.16",
+    "@types/node": "^12.6.8",
+    "@types/react": "16.8.24",
+    "@types/react-dom": "16.8.5",
+    "@types/react-redux": "^7.1.2",
+    "@types/redux": "^3.6.0",
+    "bootstrap": "^4.3.1",
+    "lodash": "^4.17.15",
+    "react": "^16.8.6",
+    "react-bootstrap": "^1.0.0-beta.11",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.1.0",
+    "react-scripts": "3.0.1",
+    "redux": "^4.0.4",
+    "redux-logger": "^3.0.6",
+    "redux-starter-kit": "^0.6.3",
+    "typescript": "3.5.3",
+    "uuid": "^3.3.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -32,5 +44,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/redux-logger": "^3.0.7",
+    "@types/uuid": "^3.4.5"
   }
 }
