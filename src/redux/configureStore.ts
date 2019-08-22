@@ -2,7 +2,11 @@ import { configureStore, getDefaultMiddleware } from 'redux-starter-kit'
 import logger from 'redux-logger'
 import { reduxBatch } from '@manaflair/redux-batch'
 import preloadedState from './preloadedState';
+import { loadState, saveState } from './localStorage'
 import reducer from './todosSlice';
+import { throttle } from 'lodash';
+
+const persistedState = loadState();
 
 const store = configureStore({
     reducer: {
@@ -10,8 +14,14 @@ const store = configureStore({
     },
     middleware: [...getDefaultMiddleware(), logger],
     devTools: process.env.NODE_ENV !== 'production',
-    preloadedState,
+    preloadedState: (persistedState || preloadedState),
     enhancers: [reduxBatch]
 })
+
+store.subscribe(throttle(() => {
+    saveState({
+        todos: store.getState().todos
+    });
+}, 1000));
 
 export default store;
