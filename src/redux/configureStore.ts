@@ -6,15 +6,13 @@ import { loadState, saveState } from './localStorage'
 import reducer from './todosSlice';
 import { throttle } from 'lodash';
 
-const persistedState = loadState();
-
 const store = configureStore({
     reducer: {
         todos: reducer,
     },
     middleware: [...getDefaultMiddleware(), logger],
     devTools: process.env.NODE_ENV !== 'production',
-    preloadedState: (persistedState || preloadedState),
+    preloadedState: (persistedState),
     enhancers: [reduxBatch]
 })
 
