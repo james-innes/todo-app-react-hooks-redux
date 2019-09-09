@@ -4,12 +4,12 @@ const preloadedState = {
     todos: [
         {
             id: uuid(),
-            name: 'Read a bit',
+            name: 'Try Reudx DevTools',
             complete: true
         },
         {
             id: uuid(),
-            name: 'Do laundry',
+            name: 'Share Redux Starter Kit',
             complete: false
         }
     ]
