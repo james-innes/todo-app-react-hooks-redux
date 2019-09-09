@@ -1,7 +1,7 @@
-import React from "react";
-import { Form, FormControl, Row, Col } from "react-bootstrap";
-import { useDispatch } from "react-redux";
-import { toggleTodo, updateNameTodo } from "../redux/todosSlice";
+import React from 'react';
+import { Form, FormControl, Row, Col } from 'react-bootstrap';
+import { useDispatch } from 'react-redux';
+import { toggleTodo, updateNameTodo } from '../redux/todosSlice';
 
 const TodoItem = (props: any) => {
   const { id, name, complete } = props.todo;
